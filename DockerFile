@@ -1,0 +1,28 @@
+#FROM maven:3.8.7 AS build
+#WORKDIR /app
+#COPY pom.xml .
+#COPY src ./src
+#RUN mvn clean install
+#
+#FROM openjdk:17-alpine
+#WORKDIR /app
+#COPY --from=build /app/target/*.jar ./app.jar
+#EXPOSE 8080
+#CMD ["java", "-.jar"]
+
+
+
+
+#
+#Build the Docker image:
+#
+#```
+#docker build -t <image-name> .
+#```
+#
+#Replace `<image-name>` with a name of choice.
+#
+#3. Run the Docker container using:
+#
+#```
+#docker run -p 8080:8080 <image-name>
