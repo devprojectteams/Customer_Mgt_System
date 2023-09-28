@@ -38,6 +38,7 @@
 package com.branddealshub.customermgtsystem.data.models;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Data;
 import org.hibernate.annotations.NaturalId;
 
@@ -46,6 +47,7 @@ import java.io.Serializable;
 @Data
 @Entity
 @Table(name = "customers")
+@Builder
 public class Customer implements Serializable {
 
     @Id
@@ -55,10 +57,8 @@ public class Customer implements Serializable {
     private String firstName;
     private String lastName;
 
-    @NaturalId
     private String email;
 
-    @NaturalId
     private String phone;
 
     private String country;
